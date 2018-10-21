@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MemoryLeak
 {
@@ -15,6 +16,8 @@ namespace MemoryLeak
                 {
                     var thread = new Thread(() => IncreaseMemory(limit));
                     thread.Start();
+
+                    Task.Run(() => IncreaseMemoryString()).Wait();
                 }
             }
             catch (Exception)
@@ -43,5 +46,15 @@ namespace MemoryLeak
             }
         }
 
+        private static void IncreaseMemoryString()
+        {
+            string init = string.Empty;
+            int i = 0;
+            while(i < 100_000)
+            {
+                init = init + "prova ";
+                i++;
+            }
+        }
     }
 }
