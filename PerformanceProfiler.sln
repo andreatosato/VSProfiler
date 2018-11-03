@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF", "EF\EF.csproj", "{3E76107F-63F4-47EA-9DAB-7A2259956DD3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF3BEB54-801A-499B-95BE-B277D9C75B6E}"
+	ProjectSection(SolutionItems) = preProject
+		Performance2.psess = Performance2.psess
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,14 +86,14 @@ Global
 		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Debug|x64.Build.0 = Debug|Any CPU
 		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Debug|x86.Build.0 = Debug|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|Any CPU.ActiveCfg = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|Any CPU.Build.0 = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|ARM.ActiveCfg = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|ARM.Build.0 = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x64.ActiveCfg = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x64.Build.0 = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x86.ActiveCfg = Mock|Any CPU
-		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x86.Build.0 = Mock|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|Any CPU.ActiveCfg = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|Any CPU.Build.0 = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|ARM.ActiveCfg = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|ARM.Build.0 = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x64.ActiveCfg = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x64.Build.0 = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x86.ActiveCfg = Release|Any CPU
+		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Mock|x86.Build.0 = Release|Any CPU
 		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E76107F-63F4-47EA-9DAB-7A2259956DD3}.Release|ARM.ActiveCfg = Release|Any CPU
@@ -105,5 +108,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44611687-DAE9-4A2A-A525-83D5F76F12BC}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
