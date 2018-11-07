@@ -11,10 +11,9 @@ namespace EF
 {
     class Program
     {
-        private Random random;
         static void Main(string[] args)
         {
-            //random = new Random();
+            Random random = new Random();
 
             Console.WriteLine("Start");
             using (var db = new PerformanceContext())
@@ -26,8 +25,8 @@ namespace EF
                     {
                         Name = $"Prova {i}",
                         Url = $"https://atosato.it/Prova{1}",
-                        BlogVisitCounter = Math.Abs( new Random().Next() ) * 100_000,
-                        //BlogVisitCounter = Math.Abs( random.Next() ) * 100_000,
+                        //BlogVisitCounter = Math.Abs( new Random().Next() ) * 100000,
+                        BlogVisitCounter = Math.Abs( random.Next() ) * 100000,
                         DateTimeInsert = DateTimeOffset.UtcNow
                     });
 
