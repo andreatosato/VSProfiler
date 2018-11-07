@@ -13,5 +13,9 @@ namespace EF
         public string Name { get; set; }
 
         public string Url { get; set; }
+
+        public int BlogVisitCounter { get; set; }
+
+        public DateTimeOffset DateTimeInsert { get; set; }
     }
 }

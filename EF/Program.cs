@@ -5,13 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using Microsoft.VisualStudio.Profiler;
 
 namespace EF
 {
     class Program
     {
+        private Random random;
         static void Main(string[] args)
         {
+            //random = new Random();
+
             Console.WriteLine("Start");
             using (var db = new PerformanceContext())
             {
@@ -21,12 +25,15 @@ namespace EF
                     db.Blogs.Add(new Blog()
                     {
                         Name = $"Prova {i}",
-                        Url = $"https://atosato.it/Prova{1}"
+                        Url = $"https://atosato.it/Prova{1}",
+                        BlogVisitCounter = Math.Abs( new Random().Next() ) * 100_000,
+                        //BlogVisitCounter = Math.Abs( random.Next() ) * 100_000,
+                        DateTimeInsert = DateTimeOffset.UtcNow
                     });
 
                     db.SaveChanges();
                     Console.WriteLine($"Elementi in tabella: {db.Blogs.Count()}");
-
+                    
                     using (var connection = new SqlConnection(db.Database.Connection.ConnectionString))
                     {
                         connection.Open();
@@ -35,9 +42,6 @@ namespace EF
                     }
                 }
             }
-
-
-            Console.ReadKey();
         }
     }
 }

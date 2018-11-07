@@ -7,11 +7,11 @@ namespace FindInFilesReadAll
     {
         static void Main(string[] args)
         {
-            var lines = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "divina_commedia.txt"));
             string searchText = string.Empty;
             do
             {
-                //var lines = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "divina_commedia.txt"));
+                var lines = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "divina_commedia.txt"));
+                Console.WriteLine("Cerca una parola:");
                 searchText = Console.ReadLine();
                 Search(lines, searchText);
             } while (!string.IsNullOrEmpty(searchText));

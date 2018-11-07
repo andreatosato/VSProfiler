@@ -9,11 +9,11 @@ namespace FindInFilesReadAll.DictionarySample
         private static Dictionary<string, List<CounterData>> SearchIndex { get; set; } = new Dictionary<string, List<CounterData>>();
         static void Main2(string[] args)
         {
-            //var lines = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "divina_commedia.txt"));
             string searchText = string.Empty;
             do
             {
                 var lines = File.ReadAllLines(Path.Combine(Environment.CurrentDirectory, "divina_commedia.txt"));
+                Console.WriteLine("Cerca una parola:");
                 searchText = Console.ReadLine();
                 Search(lines, searchText.ToUpper());
             } while (!string.IsNullOrEmpty(searchText));

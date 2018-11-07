@@ -11,7 +11,7 @@ namespace MemoryLeak
         {
             try
             {
-                var limit = 9400;
+                var limit = 940000;
                 while (true)
                 {
                     var thread = new Thread(() => IncreaseMemory(limit));
@@ -36,8 +36,7 @@ namespace MemoryLeak
             {
                 while (true)
                 {
-                    list.Add(new byte[limit]); // Change the size here.                  
-                    //Thread.Sleep(1000); // Change the wait time here.
+                    list.Add(new byte[limit]); // Change the size here.
                 }
             }
             catch (Exception ex)
